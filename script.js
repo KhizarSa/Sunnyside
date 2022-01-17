@@ -29,34 +29,34 @@ const mainNav = document.querySelector(".main-nav");
 const galImgs = document.querySelectorAll(".gal-img");
 const featureImgs = document.querySelectorAll(".feature-img");
 
+// The following function will change the source of the Image:
+const imgReplacer = function (imgs, val1, val2) {
+  imgs.forEach((img) => {
+    img.src = img.src.replace(val1, val2);
+  });
+};
+
 window.addEventListener(
   "resize",
   function (e) {
     e.preventDefault();
     if (this.window.innerWidth <= 720) {
-      galImgs.forEach((img) => {
-        img.src = img.src.replace("desktop", "mobile");
-      });
+      // Replacing Images Sources for Mobile:
+      imgReplacer(galImgs, "desktop", "mobile");
+      imgReplacer(featureImgs, "desktop", "mobile");
 
-      featureImgs.forEach((img) => {
-        img.src = img.src.replace("desktop", "mobile");
-      });
-
-      // Implementation for hamburger menu:
+      // Implementation for hamburger menu for Mobile:
       navList.classList.add("hidden");
       hamburger.classList.remove("hidden");
       mobileMenu.classList.remove("hidden");
     }
 
     if (this.window.innerWidth > 720) {
-      galImgs.forEach((img) => {
-        img.src = img.src.replace("mobile", "desktop");
-      });
+      // Replacing Images Sources for Desktop:
+      imgReplacer(galImgs, "mobile", "desktop");
+      imgReplacer(featureImgs, "mobile", "desktop");
 
-      featureImgs.forEach((img) => {
-        img.src = img.src.replace("mobile", "desktop");
-      });
-
+      // Removing Hamburger navigation for Desktop:
       navList.classList.remove("hidden");
       hamburger.classList.add("hidden");
       mobileMenu.classList.add("hidden");
