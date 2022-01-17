@@ -329,6 +329,14 @@
     margin-left: 0.5rem;
   }
 
+  .last-one {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+  }
+
+  .last-two {
+    background-image: url("../images/mobile/image-photography.jpg");
+  }
+
   .last-one,
   .last-two {
     font-size: 2.4rem;

@@ -42,14 +42,6 @@ window.addEventListener(
         img.src = img.src.replace("desktop", "mobile");
       });
 
-      document.querySelector(
-        ".last-one"
-      ).style.backgroundImage = `url("../images/mobile/image-graphic-design.jpg")`;
-
-      document.querySelector(
-        ".last-two"
-      ).style.backgroundImage = `url("../images/mobile/image-photography.jpg")`;
-
       // Implementation for hamburger menu:
       navList.classList.add("hidden");
       hamburger.classList.remove("hidden");
@@ -64,14 +56,6 @@ window.addEventListener(
       featureImgs.forEach((img) => {
         img.src = img.src.replace("mobile", "desktop");
       });
-
-      document.querySelector(
-        ".last-one"
-      ).style.backgroundImage = `url("../images/desktop/image-graphic-design.jpg")`;
-
-      document.querySelector(
-        ".last-two"
-      ).style.backgroundImage = `url("../images/desktop/image-photography.jpg")`;
 
       navList.classList.remove("hidden");
       hamburger.classList.add("hidden");
